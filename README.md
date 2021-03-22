@@ -4,6 +4,8 @@
 
 ## Images
 
+! [rejected](https://github.com/Steavn-Chen/ac_restaurant_list/blob/master/restaurant_Web_Demo.png)
+
 ## 開發環境
 
 - Node.js -v10.15.0
