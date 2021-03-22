@@ -3,7 +3,7 @@
 ### 這是一個專門介紹網路上人們熱烈討論,人潮絡繹不絕的餐廳清單,因為網站目前己有初步規模,基本的功能等下會在下方敍述,雖然目前只有八家餐廳在內,相信不久的將來隨著網站功能更新,一定也會有更多的餐廳會加入本網站,提供大家更多美食體騟.
 
 
-![rejected](https://photos.google.com/photo/AF1QipP4UAkUcdDIiTKbm2BSnGJrao35XCYnSs0RbJEx)
+![rejected](https://github.com/Steavn-Chen/ac_restaurant_list/blob/master/%E9%A4%90%E5%BB%B32.0CRUD.PNG)
 
 ## 開發環境
 
