@@ -37,7 +37,7 @@ app.get('/', (req, res) => {
 app.get('/restaurants/newRes', (req,res) => {
   res.render('newRes')
 })
- 
+
 app.post('/restaurants',(req,res) => {
   const newbody = req.body
   return RestaurantList.create(newbody)
@@ -74,6 +74,16 @@ app.post('/restaurants/:restaurant_id/edit', (req, res) => {
     .catch(error => console.log(error))
 })
 
+
+app.post('/restaurants/:restaurant_id/delete', (req,res) => {
+  const id = req.params.restaurant_id
+  return RestaurantList.findById(id)
+    .then(restaurant => restaurant.remove())
+    .then(() => res.redirect('/'))
+    .catch(error => console.log(error))
+})
+
+
 app.get('/search', (req, res) => {
   const keyword = req.query.keyword.trim()
   RestaurantList.find()
@@ -85,10 +95,6 @@ app.get('/search', (req, res) => {
       res.render('index', { restaurants: searchRestaurants, keyword: keyword })
     })
     .catch(error => console.log(error))
-})
-
-app.get('/restaurants/newRes', (req,res) => {
-  res.render('newRes')
 })
 
 app.get('/restaurants/:restaurant_id', (req, res) => {
