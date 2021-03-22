@@ -1,0 +1,57 @@
+<div class="container">
+  <div class="row offset-1">
+    <div class="col-12 col-md-10 mx-auto my-4 ">
+      <form action="/restaurants" method="POST">
+        <div class="form-row">
+          <div class="form-group col-md-5">
+            <label for="name">餐廳名稱</label>
+            <input type="text" class="form-control" id="name" placeholder="例如 : Sababa 沙巴巴中東美食" name="name">
+          </div>
+          <div class="form-group col-md-5">
+            <label for="name_en">餐廳英文名稱</label>
+            <input type="text" class="form-control" id="name_en" name="name_en" placeholder="例如 : Sababa Pita Bar">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group col-md-5">
+            <label for="category">餐廳類別</label>
+            <input type="text" class="form-control" id="category" placeholder="例如 : 中東料理" name="category">
+          </div>
+          <div class="form-group col-md-4">
+            <label for="phone">電話</label>
+            <input type="text" class="form-control" id="phone" name="phone" placeholder="例如 : 02 2xxx xxxx">
+          </div>
+          <div class="form-group col-md-1">
+            <label for="rating">評價</label>
+            <input type="text" class="form-control" id="rating" name="rating" placeholder="例:4.1">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group col-md-10">
+            <label for="image">圖片連結</label>
+            <input type="text" class="form-control" id="image" name="image"
+              placeholder="例如 : https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5635/01.jpg">
+          </div>
+          <div class="form-group col-md-10">
+            <label for="location">餐廳地址</label>
+            <input type="text" class="form-control" id="location" name="location" placeholder="例如 : 台北市永和區永和路XX號">
+          </div>
+          <div class="form-group col-md-10">
+            <label for="google_map">GoogleMap連結</label>
+            <input type="text" class="form-control" id="google_map" name="google_map"
+              placeholder="例如 : https://goo.gl/maps/BJdmLuVdDbw">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="mb-3 col-md-10">
+            <label for="description" class="form-label">餐廳介紹</label>
+            <textarea class="form-control" id="description" name="description" rows="3"
+              placeholder="例如 : 沙巴巴批塔是台灣第一家純手工批塔專賣店,只選用最新鮮的頂級原料,以及道地的中東家傳配方。"></textarea>
+          </div>
+        </div>
+        <button type="submit" class="btn btn-primary">Sign in</button>
+      </form>
+
+    </div>
+  </div>
+</div>
