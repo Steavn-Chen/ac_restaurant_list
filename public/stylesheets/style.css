@@ -103,6 +103,8 @@ body {
 .fa-readme {
   color: #30d9ca;
   cursor: pointer;
+  background-color: transparent;
+  border-style: none;
 }
 
 .fa-edit {
@@ -113,6 +115,8 @@ body {
 .fa-trash {
   color: #30d9ca;
   cursor: pointer;
+  background-color: transparent;
+  border-style: none;
 }
 
 .fa-home {
