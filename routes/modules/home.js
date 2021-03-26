@@ -4,6 +4,8 @@ const router = express.Router()
 const RestaurantList = require('../../models/restaurant')
 
 router.get('/', (req, res) => {
+   const body = req.body
+   console.log(body)
   RestaurantList.find()
     .lean()
     .sort({ _id: 'asc' })

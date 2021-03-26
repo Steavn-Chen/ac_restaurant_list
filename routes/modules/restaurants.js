@@ -22,7 +22,6 @@ router.get('/:restaurant_id/edit', (req, res) => {
     .catch(error => console.log(error))
 })
 
-//   這是物件合併方法
 router.put('/:restaurant_id', (req, res) => {
   const id = req.params.restaurant_id
   const body = req.body
@@ -43,19 +42,6 @@ router.delete('/:restaurant_id', (req,res) => {
     .catch(error => console.log(error))
 })
 
-router.get('/search', (req, res) => {
-  const keyword = req.query.keyword.trim()
-  RestaurantList.find()
-    .lean()
-    .then(restaurants => { 
-      const searchRestaurants = restaurants.filter(restaurant => {
-      return restaurant.name.toLowerCase().includes(keyword.toLowerCase())
-      })
-      res.render('index', { restaurants: searchRestaurants, keyword: keyword })
-    })
-    .catch(error => console.log(error))
-})
-
 router.get('/:restaurant_id', (req, res) => {
    const id = req.params.restaurant_id
   RestaurantList.findById(id)
@@ -63,6 +49,5 @@ router.get('/:restaurant_id', (req, res) => {
     .then(restaurant => res.render('show', { restaurant: restaurant }))
     .catch(error => console.log(error))
 })
-
 
 module.exports = router
