@@ -9,7 +9,7 @@ const routes = require('./routes')
 
 const app = express()
 
-const post = 3000
+const port = 3000
 
 require('./config/mongoose')
 
@@ -23,8 +23,8 @@ app.use(methodOverride('_method'))
 
 app.use(routes)
 
-app.listen(post, () => {
-  console.log(`Espress is listening on localhost: ${post}`)
+app.listen(port, () => {
+  console.log(`Espress is listening on localhost: ${port}`)
 }) 
 
  

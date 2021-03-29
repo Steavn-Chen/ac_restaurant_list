@@ -6,7 +6,7 @@ const RestaurantList = require('../../models/restaurant')
 router.get('/:type/:method', (req, res) => {
   const type = req.params.type
   const method = req.params.method
- const current = `${type}: ${method} `
+  const current = `${type}: '${method}' `
   RestaurantList.find()
   .lean()
   .sort( { [type]: [method] })
@@ -15,3 +15,4 @@ router.get('/:type/:method', (req, res) => {
 })
 
 module.exports = router
+
