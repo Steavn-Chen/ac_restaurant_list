@@ -1,0 +1,24 @@
+<div class="container mt-3">
+  <div class="row mt-5">
+    <div class="col-md-6  mx-auto">  
+    <div class="card card-body">
+      <h1 class="text-center mt-3">登入</h1>
+      <form action="/users/login" method="POST">
+        <div class="form-group">
+          <label for="email">電子郵件地址:</label>
+          <input type="email" id="email" name="email" class="form-control"   placeholder="請輸入電子郵件地址" >
+        </div>
+        <div class="form-group">
+          <label for="password">密碼:</label>
+          <input type="password" name="password" id="password" class="form-control"
+          placeholder="請輸入密碼">
+        </div>
+        <button type="submit" class="btn btn-info btn-block">登入</button>
+        <a href="/user/register" class="btn btn-primary btn-block">Facebook</a>
+        <p class="lead mt-3">沒有帳號 ? <a href="/users/register">註冊</a></p>
+      </form>
+    </div>
+    </div>
+  </div>
+</div>
+
