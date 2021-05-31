@@ -10,7 +10,6 @@ module.exports = app => {
   passport.use(new LocalStrategy({ usernameField: 'email'}, (email, password, done) =>{
     User.findOne({ email })
       .then(user => {
-        console.log(user)
         if (!user) { 
           return done(null,false, { message:  '這個電子郵件還未被註冊'}) 
         }
