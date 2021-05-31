@@ -21,8 +21,13 @@
       <a class="navbar-brand" href="/">
         <img src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/6227/restaurant-list-logo.png"
           width="30" height="30" class="d-inline-block align-top" alt="我的餐廳清單">
-        網路火紅餐廳清單
+          {{#if isAuthenticated }}{{ user.name }} {{/if}}喜愛的餐廳清單
       </a>
+      {{#if isAuthenticated }}
+      <a href="/users/logout" class="bt btn-info " id="main-btn-logout"><i class="fas fa-sign-out-alt "></i>登出</a>
+      {{else}}
+      <a href="/users/login" class="bt btn-info " id="main-btn-login"><i class="fas fa-sign-in-alt"></i>登入</a>
+      {{/if}}
     </div>
   </nav>
   <div class="banner"></div>

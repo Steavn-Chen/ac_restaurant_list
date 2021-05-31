@@ -182,3 +182,13 @@ body {
   border-radius: 30px;
   /* border: 1px solid #eee; */
 }
+
+#main-btn-logout,
+#main-btn-login {
+  width: 89px;
+  letter-spacing: 0.2em;
+  font-size: 1.3em;
+  border-radius: 15px;
+  text-decoration: none;
+  text-align: center;
+}

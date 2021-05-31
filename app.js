@@ -3,6 +3,7 @@ const exphbs = require('express-handlebars')
 const session = require('express-session')
 const bodyParser = require('body-parser')
 const methodOverride = require('method-override')
+
 const routes = require('./routes')
 
 const usePassport = require('./config/passport')
@@ -25,6 +26,11 @@ app.use(express.static('public'))
 app.use(methodOverride('_method'))
 
 usePassport(app)
+app.use((req, res, next) => {
+  res.locals.isAuthenticated = req.isAuthenticated()
+  res.locals.user = req.user
+  next()
+})
 
 app.use(routes)
 
