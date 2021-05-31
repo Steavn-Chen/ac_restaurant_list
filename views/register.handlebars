@@ -2,25 +2,25 @@
   <div class="row mt-5">
     <div class="col-md-6  mx-auto">
       <div class="card card-body " id="login-card">
-        <h1 class="text-center mt-3">登入</h1>
-        <form action="/users/login" method="POST">
+        <h1 class="text-center mt-3">註冊</h1>
+        <form action="/users/register" method="POST">
           <div class="form-group">
             <label for="name">名字:</label>
-            <input type="text" name="name" id="name" class="form-control" placeholder="請輸入名字">
+            <input type="text" name="name" id="name" class="form-control" placeholder="請輸入名字" value="{{ name }}">
           </div>
           <div class="form-group">
             <label for="email">電子郵件地址:</label>
-            <input type="email" id="email" name="email" class="form-control" placeholder="請輸入電子郵件地址">
+            <input type="email" id="email" name="email" class="form-control" placeholder="請輸入電子郵件地址" value="{{ email }}">
           </div>
           <div class="form-group">
             <label for="password">密碼:</label>
-            <input type="password" name="password" id="password" class="form-control" placeholder="請輸入密碼">
+            <input type="password" name="password" id="password" class="form-control" placeholder="請輸入密碼" value="{{ password }}">
           </div>
           <div class="form-group">
             <label for="confirmPassword">確認密碼</label>
-            <input type="password" name="confirmPassword" id="confirmPassword" class="form-control" placeholder="confirmPassword">
+            <input type="password" name="confirmPassword" id="confirmPassword" class="form-control" placeholder="confirmPassword" value="{{ confirmPassword }}">
           </div>
-          <button type="submit" class="btn btn-info btn-block" id="login-page-submitBtn">登入</button>
+          <button type="submit" class="btn btn-info btn-block" id="login-page-submitBtn">註冊</button>
           <a href="/user/register" class="btn btn-primary btn-block" id="login-page-registerBtn">Facebook</a>
           <p class="lead mt-3">有一個帳號 ? <a href="/users/login">登入</a></p>
         </form>
