@@ -1,22 +1,25 @@
 {
   "name": "restaurant_list",
   "version": "1.0.0",
-  "description": "",
+  "description": "![rejected](https://github.com/Steavn-Chen/ac_restaurant_list/blob/master/%E9%87%8D%E6%A7%8B%E8%B7%AF%E7%94%B1%2Cmongoose%E5%A2%9E%E5%8A%A0%E5%8A%9F%E8%83%BD.PNG)",
   "main": "app.js",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "express-handlebars": "^5.2.1",
+    "express-session": "^1.17.2",
+    "method-override": "^3.0.0",
+    "mongoose": "^5.12.1",
+    "passport": "^0.4.1",
+    "passport-local": "^1.0.0"
+  },
+  "devDependencies": {},
   "scripts": {
     "start": "node app.js",
     "dev": "nodemon app.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "seed": "node models/seeds/restaurantSeeder.js"
   },
-  "keywords": [],
   "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "body-parser": "^1.19.0",
-    "express": "^4.17.1",
-    "express-handlebars": "^5.2.1",
-    "method-override": "^3.0.0",
-    "mongoose": "^5.12.1"
-  }
+  "license": "ISC"
 }

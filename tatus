@@ -1,0 +1,133 @@
+[33mcommit 828c71553a5c7dbefd42e412d8523772abbfc4a4[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m)[m
+Author: Steavn Chen <tom9876555@yahoo.com.tw>
+Date:   Mon May 31 21:09:01 2021 +0800
+
+    feat: add express-session
+
+[33mcommit ad4dd4d81121ddb8f64bbb7130f8d3f84a664734[m
+Author: Steavn Chen <tom9876555@yahoo.com.tw>
+Date:   Mon May 31 20:55:05 2021 +0800
+
+    feat user registrarion feature is ok
+
+[33mcommit 46f817acda1ba99bc30c5d7fa3039954a2655147[m
+Author: Steavn Chen <tom9876555@yahoo.com.tw>
+Date:   Mon May 31 19:12:31 2021 +0800
+
+    feat: user model is ok
+
+[33mcommit 83b60a429850df3a6c425311be371a0d237ba560[m
+Author: Steavn Chen <tom9876555@yahoo.com.tw>
+Date:   Mon May 31 18:53:56 2021 +0800
+
+    feat register page is ok
+
+[33mcommit e135f5f182b8ae131357cfc24579a878962e50a7[m
+Author: Steavn Chen <tom9876555@yahoo.com.tw>
+Date:   Mon May 31 17:58:02 2021 +0800
+
+    feat add user modules
+
+[33mcommit 27dbbb6f246db20ea5a134d86043e1224de14086[m[33m ([m[1;31mrestaurantlist/master[m[33m, [m[1;32m新增資料夾/master[m[33m)[m
+Merge: 1ef585a 61051e2
+Author: SteavnChen <tom9876555@yahoo.com.tw>
+Date:   Mon Mar 29 19:07:34 2021 +0800
+
+    Merge branch 'master' of https://github.com/Steavn-Chen/ac_restaurant_list
+
+[33mcommit 1ef585aa0cbafbcef545bbd71b4a490e944971f0[m
+Author: SteavnChen <tom9876555@yahoo.com.tw>
+Date:   Mon Mar 29 19:03:40 2021 +0800
+
+    修正app.js port=3000,/new新增路徑,多餘的index copy.hbs檔案
+
+[33mcommit 61051e28a5f90c7e71c10b7a8ac5f10205a46938[m
+Author: Steavn-Chen <79962506+Steavn-Chen@users.noreply.github.com>
+Date:   Fri Mar 26 21:56:13 2021 +0800
+
+    Update README.md
+
+[33mcommit 84cbffd8b1d03e82ddeca061b74e8f4c28c1a310[m
+Author: Steavn-Chen <79962506+Steavn-Chen@users.noreply.github.com>
+Date:   Fri Mar 26 21:55:22 2021 +0800
+
+    Add files via upload
+
+[33mcommit de9a3c59b79b44abdf6710677d166f1c5c3f6723[m
+Author: SteavnChen <tom9876555@yahoo.com.tw>
+Date:   Fri Mar 26 21:35:00 2021 +0800
+
+    重構路由,mongoose,並增加表單排序功能,編輯後按紐提示功能
+
+[33mcommit f35ce453d092156828e69c18a31307c6234c8c76[m
+Author: SteavnChen <tom9876555@yahoo.com.tw>
+Date:   Thu Mar 25 18:05:52 2021 +0800
+
+    己重構路由
+
+[33mcommit 073abcff1ca51cba735574ddb14a75378ae707b7[m
+Author: Steavn-Chen <79962506+Steavn-Chen@users.noreply.github.com>
+Date:   Tue Mar 23 03:24:04 2021 +0800
+
+    Update README.md
+
+[33mcommit 3bd3362e94ee6e15fb122aa1cb73531fe62ba4ea[m
+Author: Steavn-Chen <79962506+Steavn-Chen@users.noreply.github.com>
+Date:   Tue Mar 23 03:23:31 2021 +0800
+
+    Add files via upload
+
+[33mcommit 1fd43fd3ca4476f9623c44b37f776f844af1a721[m
+Author: Steavn-Chen <79962506+Steavn-Chen@users.noreply.github.com>
+Date:   Tue Mar 23 03:20:25 2021 +0800
+
+    Update README.md
+
+[33mcommit b1ac16329fca9a6174817f988622ae2f095e1b42[m
+Author: Steavn-Chen <79962506+Steavn-Chen@users.noreply.github.com>
+Date:   Tue Mar 23 03:10:10 2021 +0800
+
+    Update README.md
+
+[33mcommit 55060da0ca2f35e67d5dd8f098b58ecf309f0501[m
+Merge: b054488 2505eb4
+Author: SteavnChen <tom9876555@yahoo.com.tw>
+Date:   Tue Mar 23 03:03:14 2021 +0800
+
+    Merge branch 'master' of https://github.com/Steavn-Chen/ac_restaurant_list
+
+[33mcommit b0544888581eb035616b94b951dcd5466575bde9[m
+Author: SteavnChen <tom9876555@yahoo.com.tw>
+Date:   Tue Mar 23 03:03:09 2021 +0800
+
+    餐廳CRUD己完成修正README.MD檔
+
+[33mcommit 2505eb42a3613b1e96982fb14ff994eff9244d94[m
+Author: Steavn-Chen <79962506+Steavn-Chen@users.noreply.github.com>
+Date:   Tue Mar 23 02:56:29 2021 +0800
+
+    Update README.md
+
+[33mcommit 60f701f7542a42740accb8a0f91f1e17f2322b7f[m
+Author: SteavnChen <tom9876555@yahoo.com.tw>
+Date:   Tue Mar 23 02:55:22 2021 +0800
+
+    餐廳CRUD己完成
+
+[33mcommit 10ae77b7560c118de5cba774b2e151436fdd9bbe[m
+Author: SteavnChen <tom9876555@yahoo.com.tw>
+Date:   Mon Mar 22 21:59:34 2021 +0800
+
+    己追加:新增,修改,閱讀單一資料功能
+
+[33mcommit e324896b5455c4a5befaf27e555d4bfcae344e9c[m
+Author: Steavn-Chen <79962506+Steavn-Chen@users.noreply.github.com>
+Date:   Sun Mar 14 03:36:19 2021 +0800
+
+    Update README.md
+
+[33mcommit 3f4d31564a03986c3d957b055bf54beddb9b98cd[m
+Author: Steavn Chen <tom9876555@yahoo.com.tw>
+Date:   Sun Mar 14 03:01:08 2021 +0800
+
+    restaurant_list_1.0
