@@ -169,3 +169,16 @@ body {
   /* margin-left: 15px; */
   padding-left: 15px;
 }
+
+#login-card {
+  background: rgba(255, 255, 255, 0.7);
+}
+
+#login-card-btn {
+  border-radius: 50%;
+}
+#login-page-submitBtn,
+#login-page-registerBtn {
+  border-radius: 30px;
+  /* border: 1px solid #eee; */
+}
