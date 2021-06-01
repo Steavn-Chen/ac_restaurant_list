@@ -22,8 +22,8 @@ app.use(session({
 }))
 
 app.use(bodyParser.urlencoded({ extended: true }))
-app.use(express.static('public'))
 app.use(methodOverride('_method'))
+// app.use(express.static('public'))
 
 usePassport(app)
 app.use((req, res, next) => {
@@ -32,6 +32,7 @@ app.use((req, res, next) => {
   next()
 })
 
+app.use(express.static('public'))
 app.use(routes)
 
 app.listen(port, () => {

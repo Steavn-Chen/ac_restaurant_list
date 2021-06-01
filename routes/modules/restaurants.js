@@ -2,51 +2,79 @@ const express = require('express')
 const router = express.Router()
 
 const RestaurantList = require('../../models/restaurant')
+// const user = require('../../models/user')
 
 router.get('/new', (req,res) => {
   res.render('new')
 })
 
-router.post('/',(req,res) => {
-  const newbody = req.body
-  return RestaurantList.create(newbody)
-  .then(() => {res.redirect('/')})
-  .catch(error => console.log(error))
+router.post('/', (req,res) => {
+  const body = req.body
+  const userId = req.user._id
+  // 使用物件新增數性寫入值
+  Object.defineProperty(body, "userId", {
+    value : userId,
+    writable : true,
+    enumerable : true,
+    configurable : true
+  });
+  return RestaurantList.create(body)
+
+  // const { name, name_en, category, image, location, phone, google_map, rating, description } = req.body
+  // return RestaurantList.create({ 
+  //     name,
+  //     name_en,
+  //     category,
+  //     image,
+  //     location,
+  //     phone,
+  //     google_map,
+  //     rating,
+  //     description,
+  //     userId
+  //     })
+    .then(user => console.log(user))
+    .then(() => res.redirect('/'))
+    .catch(err => console.log(err))
+  })
+
+router.get('/:restaurant_id', (req, res) => {
+  const userId = req.user._id
+  const _id = req.params.restaurant_id
+  return RestaurantList.findOne({ _id, userId})
+    .lean()
+    .then(restaurant =>  res.render('show', { restaurant: restaurant }) )
+    .catch(error => console.log(error))
 })
 
 router.get('/:restaurant_id/edit', (req, res) => {
-  const id = req.params.restaurant_id
-  return RestaurantList.findById(id)
+  const userId = req.user._id
+  const _id = req.params.restaurant_id
+  return RestaurantList.findOne({ _id, userId})
     .lean()
-    .then(restaurant => res.render('edit', {restaurant}))
+    .then(restaurant =>  res.render('edit', {restaurant}))
     .catch(error => console.log(error))
 })
 
 router.put('/:restaurant_id', (req, res) => {
-  const id = req.params.restaurant_id
+  const userId = req.user._id
+  const _id = req.params.restaurant_id
   const body = req.body
-  return RestaurantList.findById(id)
+  return RestaurantList.findOne({_id, userId })
     .then(restaurant => {
-      const newrestaurant = Object.assign(restaurant,body)
-      return newrestaurant.save()
+      const newRestaurant = Object.assign(restaurant,body)
+      return newRestaurant.save()
     })
-    .then(() => res.redirect(`/restaurants/${id}`))
+    .then(() => res.redirect(`/restaurants/${_id}`))
     .catch(error => console.log(error))
 })
 
 router.delete('/:restaurant_id', (req,res) => {
-  const id = req.params.restaurant_id
-  return RestaurantList.findById(id)
+  const userId = req.user._id
+  const _id = req.params.restaurant_id
+  return RestaurantList.findOne({_id, userId})
     .then(restaurant => restaurant.remove())
     .then(() => res.redirect('/'))
-    .catch(error => console.log(error))
-})
-
-router.get('/:restaurant_id', (req, res) => {
-   const id = req.params.restaurant_id
-  RestaurantList.findById(id)
-    .lean()
-    .then(restaurant => res.render('show', { restaurant: restaurant }))
     .catch(error => console.log(error))
 })
 
