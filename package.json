@@ -4,6 +4,7 @@
   "description": "![rejected](https://github.com/Steavn-Chen/ac_restaurant_list/blob/master/%E9%87%8D%E6%A7%8B%E8%B7%AF%E7%94%B1%2Cmongoose%E5%A2%9E%E5%8A%A0%E5%8A%9F%E8%83%BD.PNG)",
   "main": "app.js",
   "dependencies": {
+    "bcryptjs": "^2.4.3",
     "body-parser": "^1.19.0",
     "connect-flash": "^0.1.1",
     "express": "^4.17.1",
