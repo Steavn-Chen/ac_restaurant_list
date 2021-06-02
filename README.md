@@ -2,7 +2,8 @@
 
 ### 這是一個專門介紹網路上人們熱烈討論,人潮絡繹不絕的餐廳清單,因為網站目前己有初步規模,基本的功能等下會在下方敍述,雖然目前只有八家餐廳在內,相信不久的將來隨著網站功能更新,一定也會有更多的餐廳會加入本網站,提供大家更多美食體騟.
 
-![rejected](https://github.com/Steavn-Chen/ac_restaurant_list/blob/master/%E9%87%8D%E6%A7%8B%E8%B7%AF%E7%94%B1%2Cmongoose%E5%A2%9E%E5%8A%A0%E5%8A%9F%E8%83%BD.PNG)
+![rejected](https://github.com/Steavn-Chen/ac_restaurant_list/blob/master/%E8%A8%BB%E5%86%8A%E9%A0%81.PNG)
+![rejected](https://github.com/Steavn-Chen/ac_restaurant_list/blob/master/%E5%B7%B1%E5%AE%8C%E6%88%90.PNG)
 
 ## 開發環境
 
