@@ -11,7 +11,10 @@ router.get('/login', (req, res) => {
 
 router.post('/login', passport.authenticate('local', {
   successRedirect: '/',
-  failureRedirect: '/users/login'
+  failureRedirect: '/users/login',
+  //追加本地驗證
+  failureFlash: true
+  //
 }))
 
 router.get('/register', (req, res) => {
@@ -51,7 +54,6 @@ router.post('/register', (req, res) => {
       })      
     } 
     //如果還還未註冊,就把表單來的資料寫入資料庫
-      // else { 
       return bcrypt
         .genSalt(10)
         .then(salt => bcrypt.hash(password, salt))
@@ -60,14 +62,8 @@ router.post('/register', (req, res) => {
           email,
           password:hash
         }))
-      // return User.create({
-      //   name,
-      //   email,
-      //   password
-      // })
       .then(() => res.redirect('/'))
       .catch(err => console.log(err))
-    // }
   })
 })
 

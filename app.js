@@ -35,6 +35,7 @@ app.use((req, res, next) => {
   res.locals.user = req.user
   res.locals.success_msg = req.flash('success_msg')
   res.locals.warning_msg = req.flash('warning_msg')
+  res.locals.loginCheck_msg = req.flash('loginCheck_msg')
   next()
 })
 
@@ -42,7 +43,7 @@ app.use(express.static('public'))
 app.use(routes)
 
 app.listen(port, () => {
-  console.log(`Espress is listening on localhost: ${port}`)
+  console.log(`Express is listening on localhost: ${port}`)
 }) 
 
  

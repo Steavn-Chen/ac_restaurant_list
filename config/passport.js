@@ -1,6 +1,6 @@
 const passport = require('passport')
-const LocalStrategy = require('passport-local')
-const FacebookStrategy = require('passport-facebook')
+const LocalStrategy = require('passport-local').Strategy
+const FacebookStrategy = require('passport-facebook').Strategy
 const bcrypt = require('bcryptjs')
 
 const User = require('../models/user')
@@ -10,20 +10,24 @@ module.exports = app => {
   app.use(passport.initialize())
   app.use(passport.session())
   // 設定本地端登入的方式
-  passport.use(new LocalStrategy({ usernameField: 'email'}, (email, password, done) =>{
+  passport.use(new LocalStrategy({ 
+    //追加本地驗證
+    usernameField: 'email',
+    passReqToCallback: true,
+    }, (req, email, password, done) => {
     User.findOne({ email })
       .then(user => {
         if (!user) { 
-          return done(null,false, { message:  '這個電子郵件還未被註冊'}) 
+          return done(null,false, req.flash('loginCheck_msg', '這個電子郵件還未被註冊'))
         }
         // 透過 bcrypt 來比對密碼
         return bcrypt.compare(password, user.password)
           .then(isMatch => {
           if (!isMatch) { 
-            return done(null, false, { message: '電子郵件地址或密碼不正確'})
+             return done(null, false, { type:'loginCheck_msg' ,message: '電子郵件地址或密碼不正確'})
           }
           return done(null, user)
-        })
+        })    
       })
       .catch(err => done(err, null))  
   }))

@@ -2,7 +2,6 @@ const express = require('express')
 const router = express.Router()
 
 const RestaurantList = require('../../models/restaurant')
-// const user = require('../../models/user')
 
 router.get('/new', (req,res) => {
   res.render('new')
@@ -19,7 +18,7 @@ router.post('/', (req,res) => {
     configurable : true
   });
   return RestaurantList.create(body)
-
+  // 解構函式用法
   // const { name, name_en, category, image, location, phone, google_map, rating, description } = req.body
   // return RestaurantList.create({ 
   //     name,
@@ -33,7 +32,6 @@ router.post('/', (req,res) => {
   //     description,
   //     userId
   //     })
-    .then(user => console.log(user))
     .then(() => res.redirect('/'))
     .catch(err => console.log(err))
   })
