@@ -119,6 +119,7 @@ body {
   cursor: pointer;
   background-color: transparent;
   border-style: none;
+  outline: none;
 }
 
 .fa-home {
@@ -148,7 +149,7 @@ body {
     rgb(255, 128, 0) 0px -10px 20px, rgb(255, 0, 0) 0px -18px 40px;
 }
 
-#trach-button {
+#trash-button {
   margin: 0;
   padding: 0;
   border: 0;
@@ -156,7 +157,7 @@ body {
   border-style: none;
 }
 
-#trach-button:focus {
+#trash-button:focus {
   outline: 0px;
 }
 
@@ -191,4 +192,12 @@ body {
   border-radius: 15px;
   text-decoration: none;
   text-align: center;
+}
+
+#showPage_description {
+  letter-spacing: 3px;
+  text-indent: 0.5cm;
+  word-wrap: break-word;
+  word-break: break-all;
+  overflow: hidden;
 }

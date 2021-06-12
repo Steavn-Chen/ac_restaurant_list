@@ -5,55 +5,54 @@
         <div class="form-row">
           <div class="form-group col-md-5">
             <label for="name">餐廳名稱</label>
-            <input type="text" class="form-control" id="name" placeholder="例如 : Sababa 沙巴巴中東美食" name="name"
-              value="{{ restaurant.name }}" required>
+            <input  class="form-control" id="name" placeholder="例如 : Sababa 沙巴巴中東美食" name="name" value="{{ restaurant.name }}" onkeyup="value=value.replace(/[^\w\u4E00-\u9FA5]/g, '')" maxlength="25" required>
           </div>
           <div class="form-group col-md-5">
             <label for="name_en">餐廳英文名稱</label>
             <input type="text" class="form-control" id="name_en" name="name_en" placeholder="例如 : Sababa Pita Bar"
-              value="{{ restaurant.name_en }}">
+              value="{{ restaurant.name_en }}"  maxlength="25" onkeyup="value=value.replace(/[^\a-\z\A-\Z]/g,'')">
           </div>
         </div>
         <div class="form-row">
           <div class="form-group col-md-4">
             <label for="category">餐廳類別</label>
             <input type="text" class="form-control" id="category" placeholder="例如 : 中東料理" name="category"
-              value="{{ restaurant.category }} " required>
+              value="{{ restaurant.category }} " onkeyup="value=value.replace(/[^\w\u4E00-\u9FA5]/g, '')" maxlength="15" required>
           </div>
           <div class="form-group col-md-4">
             <label for="phone">電話</label>
-            <input type="text" class="form-control" id="phone" name="phone" placeholder="例如 : 02 2xxx xxxx"
-              value="{{ restaurant.phone }}" required>
+            <input type="text" class="form-control" id="phone" name="phone" placeholder="例如 : 022345678" onkeyup="this.value=this.value.replace(/\D/g,'')"
+              value="{{ restaurant.phone }}"   maxlength="15" required >
           </div>
           <div class="form-group col-md-2">
             <label for="rating">評價</label>
             <input type="number" class="form-control" id="rating" name="rating" placeholder="例:4.1" min="0" max="5"
-              step="0.1" value="{{ restaurant.rating }}" required>
+              step="0.1" value="{{ restaurant.rating }}"  maxlength="3" required>
           </div>
         </div>
         <div class=" form-row">
           <div class="form-group col-md-10">
             <label for="image">圖片連結</label>
             <input type="url" class="form-control" id="image" name="image"
-              placeholder="例如 : https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5635/01.jpg"
+              placeholder="例如 : https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5635/01.jpg" pattern="^http(s)?://([\w-]+\.)+(/?[\w\-./?%&=]*)?$" 
               value="{{ restaurant.image }}">
           </div>
           <div class="form-group col-md-10">
             <label for="location">餐廳地址</label>
             <input type="text" class="form-control" id="location" name="location" placeholder="例如 : 台北市永和區永和路XX號"
-              value="{{ restaurant.location }}" required>
+              value="{{ restaurant.location }}" onkeyup="value=value.replace(/[^\w\u4E00-\u9FA5]/g, '')" maxlength="50" required>
           </div>
           <div class="form-group col-md-10">
             <label for="google_map">GoogleMap連結</label>
             <input type="url" class="form-control" id="google_map" name="google_map"
-              placeholder="例如 : https://goo.gl/maps/BJdmLuVdDbw" value="{{ restaurant.google_map }}">
+              placeholder="例如 : https://www.google.com.tw/maps/place" value="{{ restaurant.google_map }}" pattern="^https://www.google.com.tw/maps/place/.*">
           </div>
         </div>
         <div class="form-row">
           <div class="mb-3 col-md-10">
             <label for="description" class="form-label">餐廳介紹</label>
-            <textarea class="form-control" id="description" name="description" rows="3"
-              placeholder="例如 : 沙巴巴批塔是台灣第一家純手工批塔專賣店,只選用最新鮮的頂級原料,以及道地的中東家傳配方。"
+            <textarea class="form-control" id="description" name="description" rows="3" 
+              placeholder="例如 : 沙巴巴批塔是台灣第一家純手工批塔專賣店,只選用最新鮮的頂級原料,以及道地的中東家傳配方。" maxlength="250"
               required>{{ restaurant.description }}</textarea>
           </div>
         </div>

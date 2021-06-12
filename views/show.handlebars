@@ -6,7 +6,7 @@
         <form action="/restaurants/{{ restaurant._id }}?_method=DELETE" method="POST">
           <div class="form-row align-items-center">
             <div class="col-auto">
-              <button type="submit" id="trach-button"><i class=" fas fa-trash fa-2x p-2 bd-highlight"></i></button>
+              <button type="submit" id="trash-button"><i class=" fas fa-trash fa-2x p-2 bd-highlight"></i></button>
             </div>
           </div>
         </form>
@@ -40,7 +40,7 @@
         </span>
         {{restaurant.phone}}
       </p>
-      <p class="mb-5">
+      <p class="mb-5" id="showPage_description">
         {{restaurant.description}}
       </p>
       <img class="rounded mx-auto d-block mb-4 w-100" src="{{restaurant.image}}" alt="{{restaurant.name}}"
